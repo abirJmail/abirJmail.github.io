@@ -1,10 +1,8 @@
 @import url("./reset.css");
 @import url("../bootstrap/bootstrap.min.css");
 @import url("./carroussel.css");
-/* @import 'animate.css'; */
 body {
   --tw-bg-opacity: 1;
-  /* background-color:  #fefee0; */
   background-color: rgb(255, 254, 253);
 }
 .bg_black {
@@ -80,8 +78,6 @@ main {
 }
 .ulmenu {
   list-style-type: none;
-  --tw-bg-opacity: 1;
-  background-color: rgba(26, 28, 29, var(--tw-bg-opacity));
 }
 a {
   color: inherit;
@@ -200,8 +196,7 @@ nav {
 }
 .tCV {
   text-decoration: underline;
-  /* --tw-text-opacity: 1;
-  color: rgb(42, 48, 57, var(--tw-text-opacity)); */
+
 }
 .avatar {
   display: none;
@@ -346,8 +341,7 @@ nav {
   width: 9rem;
   height: 9rem;
   margin: 0.5rem;
-  /* opacity: 0.3; */
-  opacity: 0.4;
+  opacity: 0.8;
 }
 .grille1 {
   text-align: end;

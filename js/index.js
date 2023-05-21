@@ -27,6 +27,7 @@
 
 
 // création de la fonction "dayNight"
+const theme =document.querySelectorAll('#theme')
 const aboutHome = document.querySelector(".aboutHome")
 const strong = document.querySelectorAll("strong")
 const fa=document.querySelectorAll(".fa")
@@ -35,7 +36,10 @@ function dayNight() {
     
     // document.body.classList.contains('bg_black') ? (theme.innerHTML = "❂") : (theme.innerHTML = "☾");
     if (document.body.classList.contains('bg_black')) {
-        theme.innerHTML = "❂";
+        theme.forEach(el => {
+            el.innerHTML = "❂";
+        });
+        // theme.innerHTML = "❂";
         aboutHome.classList.add('aboutHomeNight')
         aboutHome.classList.remove('aboutHomeDay')
         document.body.classList.add('textNight');
@@ -49,7 +53,10 @@ function dayNight() {
             el.classList.remove('faDay')
         });
     } else {
-        theme.innerHTML = "☾"
+        theme.forEach(el => {
+            el.innerHTML = "☾";
+        });
+        // theme.innerHTML = "☾"
         aboutHome.classList.add('aboutHomeDay')
         aboutHome.classList.remove('aboutHomeNight')
         document.body.classList.add('textDay');
@@ -64,9 +71,12 @@ function dayNight() {
         });
     }
 }
-const theme = document.getElementById('theme');
 
-theme.addEventListener('click', dayNight);
+
+theme.forEach(elt => {
+    elt.addEventListener('click', dayNight);
+});
+
 // ------------------------home illustration---------------------
 window.addEventListener('scroll',function () {
     const scrollTop = window.scrollY;
